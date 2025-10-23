@@ -1,292 +1,14 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-03 23:52:46.504310700 UTC
+// 2025-10-23 22:53:43.326753400 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: soundsystem.dll
-        // Class count: 77
-        // Enum count: 19
+        // Class count: 74
+        // Enum count: 0
         pub mod soundsystem_dll {
-            // Alignment: 4
-            // Member count: 2
-            #[repr(u32)]
-            pub enum EMode_t {
-                Peak = 0x0,
-                RMS = 0x1
-            }
-            // Alignment: 4
-            // Member count: 39
-            #[repr(u32)]
-            pub enum VMixGraphCommandID_t {
-                CMD_INVALID = u32::MAX,
-                CMD_CONTROL_INPUT_STORE = 0x1,
-                CMD_CONTROL_INPUT_STORE_DB = 0x2,
-                CMD_CONTROL_TRANSIENT_INPUT_STORE = 0x3,
-                CMD_CONTROL_TRANSIENT_INPUT_RESET = 0x4,
-                CMD_CONTROL_OUTPUT_STORE = 0x5,
-                CMD_CONTROL_EVALUATE_CURVE = 0x6,
-                CMD_CONTROL_COPY = 0x7,
-                CMD_CONTROL_COND_COPY_IF_NEGATIVE = 0x8,
-                CMD_CONTROL_REMAP_LINEAR = 0x9,
-                CMD_CONTROL_REMAP_SINE = 0xA,
-                CMD_CONTROL_REMAP_LOGLINEAR = 0xB,
-                CMD_CONTROL_MAX = 0xC,
-                CMD_CONTROL_RESET_TIMER = 0xD,
-                CMD_CONTROL_INCREMENT_TIMER = 0xE,
-                CMD_CONTROL_EVAL_ENVELOPE = 0xF,
-                CMD_CONTROL_SINE_BLEND = 0x10,
-                CMD_PROCESSOR_SET_CONTROL_VALUE = 0x11,
-                CMD_PROCESSOR_SET_NAME_INPUT = 0x12,
-                CMD_PROCESSOR_SET_CONTROL_ARRAYVALUE = 0x13,
-                CMD_PROCESSOR_STORE_CONTROL_VALUE = 0x14,
-                CMD_PROCESSOR_SET_VSND_VALUE = 0x15,
-                CMD_SUBMIX_PROCESS = 0x16,
-                CMD_SUBMIX_GENERATE = 0x17,
-                CMD_SUBMIX_GENERATE_SIDECHAIN = 0x18,
-                CMD_SUBMIX_DEBUG = 0x19,
-                CMD_SUBMIX_MIX2x1 = 0x1A,
-                CMD_SUBMIX_OUTPUT = 0x1B,
-                CMD_SUBMIX_OUTPUTx2 = 0x1C,
-                CMD_SUBMIX_COPY = 0x1D,
-                CMD_SUBMIX_ACCUMULATE = 0x1E,
-                CMD_SUBMIX_METER = 0x1F,
-                CMD_SUBMIX_METER_SPECTRUM = 0x20,
-                CMD_IMPULSERESPONSE_INPUT_STORE = 0x21,
-                CMD_PROCESSOR_SET_IMPULSERESPONSE_VALUE = 0x22,
-                CMD_REMAP_VSND_TO_IMPULSERESPONSE = 0x23,
-                CMD_IMPULSERESPONSE_RESET = 0x24,
-                CMD_BLEND_VSNDS_TO_IMPULSERESPONSE = 0x25,
-                CMD_IMPULSERESPONSE_DELAY = 0x26
-            }
-            // Alignment: 1
-            // Member count: 5
-            #[repr(u8)]
-            pub enum EWaveform {
-                Sine = 0x0,
-                Square = 0x1,
-                Saw = 0x2,
-                Triangle = 0x3,
-                Noise = 0x4
-            }
-            // Alignment: 4
-            // Member count: 5
-            #[repr(u32)]
-            pub enum VMixLFOShape_t {
-                LFO_SHAPE_SINE = 0x0,
-                LFO_SHAPE_SQUARE = 0x1,
-                LFO_SHAPE_TRI = 0x2,
-                LFO_SHAPE_SAW = 0x3,
-                LFO_SHAPE_NOISE = 0x4
-            }
-            // Alignment: 2
-            // Member count: 10
-            #[repr(u16)]
-            pub enum VMixFilterType_t {
-                FILTER_UNKNOWN = u16::MAX,
-                FILTER_LOWPASS = 0x0,
-                FILTER_HIGHPASS = 0x1,
-                FILTER_BANDPASS = 0x2,
-                FILTER_NOTCH = 0x3,
-                FILTER_PEAKING_EQ = 0x4,
-                FILTER_LOW_SHELF = 0x5,
-                FILTER_HIGH_SHELF = 0x6,
-                FILTER_ALLPASS = 0x7,
-                FILTER_PASSTHROUGH = 0x8
-            }
-            // Alignment: 4
-            // Member count: 3
-            #[repr(u32)]
-            pub enum SosActionStopType_t {
-                SOS_STOPTYPE_NONE = 0x0,
-                SOS_STOPTYPE_TIME = 0x1,
-                SOS_STOPTYPE_OPVAR = 0x2
-            }
-            // Alignment: 4
-            // Member count: 6
-            #[repr(u32)]
-            pub enum SosEditItemType_t {
-                SOS_EDIT_ITEM_TYPE_SOUNDEVENTS = 0x0,
-                SOS_EDIT_ITEM_TYPE_SOUNDEVENT = 0x1,
-                SOS_EDIT_ITEM_TYPE_LIBRARYSTACKS = 0x2,
-                SOS_EDIT_ITEM_TYPE_STACK = 0x3,
-                SOS_EDIT_ITEM_TYPE_OPERATOR = 0x4,
-                SOS_EDIT_ITEM_TYPE_FIELD = 0x5
-            }
-            // Alignment: 4
-            // Member count: 2
-            #[repr(u32)]
-            pub enum SosActionSortType_t {
-                SOS_SORTTYPE_HIGHEST = 0x0,
-                SOS_SORTTYPE_LOWEST = 0x1
-            }
-            // Alignment: 4
-            // Member count: 5
-            #[repr(u32)]
-            pub enum PlayBackMode_t {
-                Random = 0x0,
-                RandomNoRepeats = 0x1,
-                RandomAvoidLast = 0x2,
-                Sequential = 0x3,
-                RandomWeights = 0x4
-            }
-            // Alignment: 2
-            // Member count: 32
-            #[repr(u16)]
-            pub enum VMixProcessorType_t {
-                VPROCESSOR_UNKNOWN = 0x0,
-                VPROCESSOR_RT_PITCH = 0x1,
-                VPROCESSOR_STEAMAUDIO_HRTF = 0x2,
-                VPROCESSOR_DYNAMICS = 0x3,
-                VPROCESSOR_PRESETDSP = 0x4,
-                VPROCESSOR_DELAY = 0x5,
-                VPROCESSOR_MOD_DELAY = 0x6,
-                VPROCESSOR_DIFFUSOR = 0x7,
-                VPROCESSOR_BOXVERB = 0x8,
-                VPROCESSOR_BOXVERB2 = 0x9,
-                VPROCESSOR_FREEVERB = 0xA,
-                VPROCESSOR_PLATEVERB = 0xB,
-                VPROCESSOR_FULLWAVE_INTEGRATOR = 0xC,
-                VPROCESSOR_FILTER = 0xD,
-                VPROCESSOR_STEAMAUDIO_PATHING = 0xE,
-                VPROCESSOR_EQ8 = 0xF,
-                VPROCESSOR_ENVELOPE = 0x10,
-                VPROCESSOR_VOCODER = 0x11,
-                VPROCESSOR_CONVOLUTION = 0x12,
-                VPROCESSOR_DUAL_COMPRESSOR = 0x13,
-                VPROCESSOR_DYNAMICS_3BAND = 0x14,
-                VPROCESSOR_DYNAMICS_COMPRESSOR = 0x15,
-                VPROCESSOR_SHAPER = 0x16,
-                VPROCESSOR_PANNER = 0x17,
-                VPROCESSOR_UTILITY = 0x18,
-                VPROCESSOR_AUTOFILTER = 0x19,
-                VPROCESSOR_OSC = 0x1A,
-                VPROCESSOR_STEREODELAY = 0x1B,
-                VPROCESSOR_EFFECT_CHAIN = 0x1C,
-                VPROCESSOR_SUBGRAPH_SWITCH = 0x1D,
-                VPROCESSOR_STEAMAUDIO_DIRECT = 0x1E,
-                VPROCESSOR_STEAMAUDIO_HYBRIDREVERB = 0x1F
-            }
-            // Alignment: 4
-            // Member count: 30
-            #[repr(u32)]
-            pub enum soundlevel_t {
-                SNDLVL_NONE = 0x0,
-                SNDLVL_20dB = 0x14,
-                SNDLVL_25dB = 0x19,
-                SNDLVL_30dB = 0x1E,
-                SNDLVL_35dB = 0x23,
-                SNDLVL_40dB = 0x28,
-                SNDLVL_45dB = 0x2D,
-                SNDLVL_50dB = 0x32,
-                SNDLVL_55dB = 0x37,
-                SNDLVL_IDLE = 0x3C,
-                SNDLVL_65dB = 0x41,
-                SNDLVL_STATIC = 0x42,
-                SNDLVL_70dB = 0x46,
-                SNDLVL_NORM = 0x4B,
-                SNDLVL_80dB = 0x50,
-                SNDLVL_85dB = 0x55,
-                SNDLVL_90dB = 0x5A,
-                SNDLVL_95dB = 0x5F,
-                SNDLVL_100dB = 0x64,
-                SNDLVL_105dB = 0x69,
-                SNDLVL_110dB = 0x6E,
-                SNDLVL_120dB = 0x78,
-                SNDLVL_130dB = 0x82,
-                SNDLVL_GUNFIRE = 0x8C,
-                SNDLVL_150dB = 0x96,
-                SNDLVL_180dB = 0xB4
-            }
-            // Alignment: 4
-            // Member count: 2
-            #[repr(u32)]
-            pub enum VMixPannerType_t {
-                PANNER_TYPE_LINEAR = 0x0,
-                PANNER_TYPE_EQUAL_POWER = 0x1
-            }
-            // Alignment: 4
-            // Member count: 6
-            #[repr(u32)]
-            pub enum VMixChannelOperation_t {
-                VMIX_CHAN_STEREO = 0x0,
-                VMIX_CHAN_LEFT = 0x1,
-                VMIX_CHAN_RIGHT = 0x2,
-                VMIX_CHAN_SWAP = 0x3,
-                VMIX_CHAN_MONO = 0x4,
-                VMIX_CHAN_MID_SIDE = 0x5
-            }
-            // Alignment: 1
-            // Member count: 13
-            #[repr(u8)]
-            pub enum EMidiNote {
-                C = 0x0,
-                C_Sharp = 0x1,
-                D = 0x2,
-                D_Sharp = 0x3,
-                E = 0x4,
-                F = 0x5,
-                F_Sharp = 0x6,
-                G = 0x7,
-                G_Sharp = 0x8,
-                A = 0x9,
-                A_Sharp = 0xA,
-                B = 0xB,
-                Count = 0xC
-            }
-            // Alignment: 1
-            // Member count: 4
-            #[repr(u8)]
-            pub enum CVSoundFormat_t {
-                PCM16 = 0x0,
-                PCM8 = 0x1,
-                MP3 = 0x2,
-                ADPCM = 0x3
-            }
-            // Alignment: 1
-            // Member count: 9
-            #[repr(u8)]
-            pub enum VMixFilterSlope_t {
-                FILTER_SLOPE_1POLE_6dB = 0x0,
-                FILTER_SLOPE_1POLE_12dB = 0x1,
-                FILTER_SLOPE_1POLE_18dB = 0x2,
-                FILTER_SLOPE_1POLE_24dB = 0x3,
-                FILTER_SLOPE_12dB = 0x4,
-                FILTER_SLOPE_24dB = 0x5,
-                FILTER_SLOPE_36dB = 0x6,
-                FILTER_SLOPE_48dB = 0x7
-            }
-            // Alignment: 4
-            // Member count: 10
-            #[repr(u32)]
-            pub enum ActionType_t {
-                SOS_ACTION_NONE = 0x0,
-                SOS_ACTION_LIMITER = 0x1,
-                SOS_ACTION_TIME_LIMIT = 0x2,
-                SOS_ACTION_TIME_BLOCK_LIMITER = 0x3,
-                SOS_ACTION_SET_SOUNDEVENT_PARAM = 0x4,
-                SOS_ACTION_SOUNDEVENT_CLUSTER = 0x5,
-                SOS_ACTION_SOUNDEVENT_PRIORITY = 0x6,
-                SOS_ACTION_COUNT_ENVELOPE = 0x7,
-                SOS_ACTION_SOUNDEVENT_COUNT = 0x8,
-                SOS_ACTION_SOUNDEVENT_MIN_MAX_VALUES = 0x9
-            }
-            // Alignment: 4
-            // Member count: 3
-            #[repr(u32)]
-            pub enum VMixSubgraphSwitchInterpolationType_t {
-                SUBGRAPH_INTERPOLATION_TEMPORAL_CROSSFADE = 0x0,
-                SUBGRAPH_INTERPOLATION_TEMPORAL_FADE_OUT = 0x1,
-                SUBGRAPH_INTERPOLATION_KEEP_LAST_SUBGRAPH_RUNNING = 0x2
-            }
-            // Alignment: 4
-            // Member count: 2
-            #[repr(u32)]
-            pub enum SosGroupType_t {
-                SOS_GROUPTYPE_DYNAMIC = 0x0,
-                SOS_GROUPTYPE_STATIC = 0x1
-            }
             // Parent: None
             // Field count: 3
             //
@@ -390,26 +112,28 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionSoundeventClusterSchema {
-                pub const m_nMinNearby: usize = 0x18; // int32
-                pub const m_flClusterEpsilon: usize = 0x1C; // float32
-                pub const m_shouldPlayOpvar: usize = 0x20; // CUtlString
-                pub const m_shouldPlayClusterChild: usize = 0x28; // CUtlString
-                pub const m_clusterSizeOpvar: usize = 0x30; // CUtlString
-                pub const m_groupBoundingBoxMinsOpvar: usize = 0x38; // CUtlString
-                pub const m_groupBoundingBoxMaxsOpvar: usize = 0x40; // CUtlString
+                pub const m_nMinNearby: usize = 0x8; // int32
+                pub const m_flClusterEpsilon: usize = 0xC; // float32
+                pub const m_shouldPlayOpvar: usize = 0x10; // CUtlString
+                pub const m_shouldPlayClusterChild: usize = 0x18; // CUtlString
+                pub const m_clusterSizeOpvar: usize = 0x20; // CUtlString
+                pub const m_groupBoundingBoxMinsOpvar: usize = 0x28; // CUtlString
+                pub const m_groupBoundingBoxMaxsOpvar: usize = 0x30; // CUtlString
             }
             // Parent: None
             // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionSetSoundeventParameterSchema {
-                pub const m_nMaxCount: usize = 0x18; // int32
-                pub const m_flMinValue: usize = 0x1C; // float32
-                pub const m_flMaxValue: usize = 0x20; // float32
-                pub const m_opvarName: usize = 0x28; // CUtlString
-                pub const m_nSortType: usize = 0x30; // SosActionSortType_t
+                pub const m_nMaxCount: usize = 0x8; // int32
+                pub const m_flMinValue: usize = 0xC; // float32
+                pub const m_flMaxValue: usize = 0x10; // float32
+                pub const m_opvarName: usize = 0x18; // CUtlString
+                pub const m_nSortType: usize = 0x20; // SosActionSetParamSortType_t
             }
             // Parent: None
             // Field count: 3
@@ -483,17 +207,18 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionSoundeventMinMaxValuesSchema {
-                pub const m_strQueryPublicFieldName: usize = 0x18; // CUtlString
-                pub const m_strDelayPublicFieldName: usize = 0x20; // CUtlString
-                pub const m_bExcludeStoppedSounds: usize = 0x28; // bool
-                pub const m_bExcludeDelayedSounds: usize = 0x29; // bool
-                pub const m_bExcludeSoundsBelowThreshold: usize = 0x2A; // bool
-                pub const m_flExcludeSoundsMinThresholdValue: usize = 0x2C; // float32
-                pub const m_bExcludSoundsAboveThreshold: usize = 0x30; // bool
-                pub const m_flExcludeSoundsMaxThresholdValue: usize = 0x34; // float32
-                pub const m_strMinValueName: usize = 0x38; // CUtlString
-                pub const m_strMaxValueName: usize = 0x40; // CUtlString
+                pub const m_strQueryPublicFieldName: usize = 0x8; // CUtlString
+                pub const m_strDelayPublicFieldName: usize = 0x10; // CUtlString
+                pub const m_bExcludeStoppedSounds: usize = 0x18; // bool
+                pub const m_bExcludeDelayedSounds: usize = 0x19; // bool
+                pub const m_bExcludeSoundsBelowThreshold: usize = 0x1A; // bool
+                pub const m_flExcludeSoundsMinThresholdValue: usize = 0x1C; // float32
+                pub const m_bExcludSoundsAboveThreshold: usize = 0x20; // bool
+                pub const m_flExcludeSoundsMaxThresholdValue: usize = 0x24; // float32
+                pub const m_strMinValueName: usize = 0x28; // CUtlString
+                pub const m_strMaxValueName: usize = 0x30; // CUtlString
             }
             // Parent: None
             // Field count: 2
@@ -509,11 +234,12 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionSoundeventPrioritySchema {
-                pub const m_priorityValue: usize = 0x18; // CUtlString
-                pub const m_priorityVolumeScalar: usize = 0x20; // CUtlString
-                pub const m_priorityContributeButDontRead: usize = 0x28; // CUtlString
-                pub const m_bPriorityReadButDontContribute: usize = 0x30; // CUtlString
+                pub const m_priorityValue: usize = 0x8; // CUtlString
+                pub const m_priorityVolumeScalar: usize = 0x10; // CUtlString
+                pub const m_priorityContributeButDontRead: usize = 0x18; // CUtlString
+                pub const m_bPriorityReadButDontContribute: usize = 0x20; // CUtlString
             }
             // Parent: None
             // Field count: 3
@@ -576,44 +302,34 @@ pub mod cs2_dumper {
                 pub const m_flTaps: usize = 0x4C; // float32
             }
             // Parent: None
-            // Field count: 3
+            // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPropertyElementNameFn
             pub mod CSosGroupActionSchema {
-                pub const m_name: usize = 0x8; // CUtlString
-                pub const m_actionType: usize = 0x10; // ActionType_t
-                pub const m_actionInstanceType: usize = 0x14; // ActionType_t
             }
             // Parent: None
-            // Field count: 9
+            // Field count: 16
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPropertyElementNameFn
             pub mod CSosSoundEventGroupSchema {
-                pub const m_name: usize = 0x0; // CUtlString
-                pub const m_nType: usize = 0x8; // SosGroupType_t
-                pub const m_bIsBlocking: usize = 0xC; // bool
+                pub const m_nGroupType: usize = 0x8; // SosGroupType_t
+                pub const m_bBlocksEvents: usize = 0xC; // bool
                 pub const m_nBlockMaxCount: usize = 0x10; // int32
-                pub const m_bInvertMatch: usize = 0x14; // bool
-                pub const m_matchPattern: usize = 0x18; // CSosGroupMatchPattern
-                pub const m_branchPattern: usize = 0x48; // CSosGroupBranchPattern
-                pub const m_flLifeSpanTime: usize = 0x58; // float32
-                pub const m_vActions: usize = 0xC0; // CSosGroupActionSchema*[4]
-            }
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CSosGroupBranchPattern {
-                pub const m_bMatchEventName: usize = 0x8; // bool
-                pub const m_bMatchEventSubString: usize = 0x9; // bool
-                pub const m_bMatchEntIndex: usize = 0xA; // bool
-                pub const m_bMatchOpvar: usize = 0xB; // bool
-                pub const m_bMatchString: usize = 0xC; // bool
+                pub const m_flMemberLifespanTime: usize = 0x14; // float32
+                pub const m_bInvertMatch: usize = 0x18; // bool
+                pub const m_Behavior_EventName: usize = 0x1C; // SosGroupFieldBehavior_t
+                pub const m_matchSoundEventName: usize = 0x20; // CUtlString
+                pub const m_bMatchEventSubString: usize = 0x28; // bool
+                pub const m_matchSoundEventSubString: usize = 0x30; // CUtlString
+                pub const m_Behavior_EntIndex: usize = 0x38; // SosGroupFieldBehavior_t
+                pub const m_flEntIndex: usize = 0x3C; // float32
+                pub const m_Behavior_Opvar: usize = 0x40; // SosGroupFieldBehavior_t
+                pub const m_flOpvar: usize = 0x44; // float32
+                pub const m_Behavior_String: usize = 0x48; // SosGroupFieldBehavior_t
+                pub const m_opvarString: usize = 0x50; // CUtlString
+                pub const m_vActions: usize = 0x58; // CUtlVector<CSosGroupActionSchema*>
             }
             // Parent: None
             // Field count: 10
@@ -771,9 +487,10 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionSoundeventCountSchema {
-                pub const m_bExcludeStoppedSounds: usize = 0x18; // bool
-                pub const m_strCountKeyName: usize = 0x20; // CUtlString
+                pub const m_bExcludeStoppedSounds: usize = 0x8; // bool
+                pub const m_strCountKeyName: usize = 0x10; // CUtlString
             }
             // Parent: None
             // Field count: 3
@@ -855,26 +572,6 @@ pub mod cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod CSoundInfoHeader {
-            }
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CSosSoundEventGroupListSchema {
-                pub const m_groupList: usize = 0x0; // CUtlVector<CSosSoundEventGroupSchema>
-            }
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod CSosGroupMatchPattern {
-                pub const m_matchSoundEventName: usize = 0x10; // CUtlString
-                pub const m_matchSoundEventSubString: usize = 0x18; // CUtlString
-                pub const m_flEntIndex: usize = 0x20; // float32
-                pub const m_flOpvar: usize = 0x24; // float32
-                pub const m_opvarString: usize = 0x28; // CUtlString
             }
             // Parent: None
             // Field count: 5
@@ -992,14 +689,17 @@ pub mod cs2_dumper {
                 pub const m_curve4: usize = 0x1B8; // CPiecewiseCurve
             }
             // Parent: None
-            // Field count: 3
+            // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionLimitSchema {
-                pub const m_nMaxCount: usize = 0x18; // int32
-                pub const m_nStopType: usize = 0x1C; // SosActionStopType_t
-                pub const m_nSortType: usize = 0x20; // SosActionSortType_t
+                pub const m_nMaxCount: usize = 0x8; // int32
+                pub const m_nStopType: usize = 0xC; // SosActionStopType_t
+                pub const m_nSortType: usize = 0x10; // SosActionLimitSortType_t
+                pub const m_bStopImmediate: usize = 0x14; // bool
+                pub const m_bCountStopped: usize = 0x15; // bool
             }
             // Parent: None
             // Field count: 1
@@ -1090,9 +790,10 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionTimeBlockLimitSchema {
-                pub const m_nMaxCount: usize = 0x18; // int32
-                pub const m_flMaxDuration: usize = 0x1C; // float32
+                pub const m_nMaxCount: usize = 0x8; // int32
+                pub const m_flMaxDuration: usize = 0xC; // float32
             }
             // Parent: None
             // Field count: 2
@@ -1110,15 +811,16 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionMemberCountEnvelopeSchema {
-                pub const m_nBaseCount: usize = 0x18; // int32
-                pub const m_nTargetCount: usize = 0x1C; // int32
-                pub const m_flBaseValue: usize = 0x20; // float32
-                pub const m_flTargetValue: usize = 0x24; // float32
-                pub const m_flAttack: usize = 0x28; // float32
-                pub const m_flDecay: usize = 0x2C; // float32
-                pub const m_resultVarName: usize = 0x30; // CUtlString
-                pub const m_bSaveToGroup: usize = 0x38; // bool
+                pub const m_nBaseCount: usize = 0x8; // int32
+                pub const m_nTargetCount: usize = 0xC; // int32
+                pub const m_flBaseValue: usize = 0x10; // float32
+                pub const m_flTargetValue: usize = 0x14; // float32
+                pub const m_flAttack: usize = 0x18; // float32
+                pub const m_flDecay: usize = 0x1C; // float32
+                pub const m_resultVarName: usize = 0x20; // CUtlString
+                pub const m_bSaveToGroup: usize = 0x28; // bool
             }
             // Parent: None
             // Field count: 1
@@ -1135,8 +837,9 @@ pub mod cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             pub mod CSosGroupActionTimeLimitSchema {
-                pub const m_flMaxDuration: usize = 0x18; // float32
+                pub const m_flMaxDuration: usize = 0x8; // float32
             }
             // Parent: None
             // Field count: 10

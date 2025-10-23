@@ -1,42 +1,25 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-03 23:52:46.504310700 UTC
+// 2025-10-23 22:53:43.326753400 UTC
 
 #![allow(non_upper_case_globals, non_camel_case_types, non_snake_case, unused)]
 
 pub mod cs2_dumper {
     pub mod schemas {
         // Module: worldrenderer.dll
-        // Class count: 26
-        // Enum count: 2
+        // Class count: 25
+        // Enum count: 15
         pub mod worldrenderer_dll {
-            // Alignment: 4
-            // Member count: 15
-            #[repr(u32)]
-            pub enum ObjectTypeFlags_t {
-                OBJECT_TYPE_NONE = 0x0,
-                OBJECT_TYPE_MODEL = 0x8,
-                OBJECT_TYPE_BLOCK_LIGHT = 0x10,
-                OBJECT_TYPE_NO_SHADOWS = 0x20,
-                OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND = 0x40,
-                OBJECT_TYPE_DISABLED_IN_LOW_QUALITY = 0x80,
-                OBJECT_TYPE_NO_SUN_SHADOWS = 0x100,
-                OBJECT_TYPE_RENDER_WITH_DYNAMIC = 0x200,
-                OBJECT_TYPE_RENDER_TO_CUBEMAPS = 0x400,
-                OBJECT_TYPE_MODEL_HAS_LODS = 0x800,
-                OBJECT_TYPE_OVERLAY = 0x2000,
-                OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 0x4000,
-                OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000,
-                OBJECT_TYPE_DISABLE_VIS_CULLING = 0x10000,
-                OBJECT_TYPE_BAKED_GEOMETRY = 0x20000
+            // Alignment: 1
+            // Member count: 0
+            #[repr(u8)]
+            pub enum CParticleBindingRealPulse {
+
             }
             // Alignment: 1
-            // Member count: 4
+            // Member count: 0
             #[repr(u8)]
-            pub enum AggregateInstanceStream_t {
-                AGGREGATE_INSTANCE_STREAM_NONE = 0x0,
-                AGGREGATE_INSTANCE_STREAM_LIGHTMAPUV_UNORM16 = 0x1,
-                AGGREGATE_INSTANCE_STREAM_VERTEXTINT_UNORM8 = 0x2,
-                AGGREGATE_INSTANCE_STREAM_VERTEXBLEND_UNORM8 = 0x4
+            pub enum CParticleCollectionBindingInstance {
+
             }
             // Parent: None
             // Field count: 1
@@ -184,27 +167,25 @@ pub mod cs2_dumper {
                 pub const m_entityKeyValues: usize = 0x28; // CUtlLeanVector<EntityKeyValueData_t>
             }
             // Parent: None
-            // Field count: 16
+            // Field count: 14
             //
             // Metadata:
             // MGetKV3ClassDefaults
             pub mod WorldNode_t {
                 pub const m_sceneObjects: usize = 0x0; // CUtlVector<SceneObject_t>
-                pub const m_infoOverlays: usize = 0x18; // CUtlVector<InfoOverlayData_t>
-                pub const m_visClusterMembership: usize = 0x30; // CUtlVector<uint16>
-                pub const m_aggregateSceneObjects: usize = 0x48; // CUtlVector<AggregateSceneObject_t>
-                pub const m_clutterSceneObjects: usize = 0x60; // CUtlVector<ClutterSceneObject_t>
-                pub const m_extraVertexStreamOverrides: usize = 0x78; // CUtlVector<ExtraVertexStreamOverride_t>
-                pub const m_materialOverrides: usize = 0x90; // CUtlVector<MaterialOverride_t>
-                pub const m_extraVertexStreams: usize = 0xA8; // CUtlVector<WorldNodeOnDiskBufferData_t>
-                pub const m_aggregateInstanceStreams: usize = 0xC0; // CUtlVector<AggregateInstanceStreamOnDiskData_t>
-                pub const m_vertexAlbedoStreams: usize = 0xD8; // CUtlVector<AggregateVertexAlbedoStreamOnDiskData_t>
-                pub const m_layerNames: usize = 0xF0; // CUtlVector<CUtlString>
-                pub const m_sceneObjectLayerIndices: usize = 0x108; // CUtlVector<uint8>
-                pub const m_overlayLayerIndices: usize = 0x120; // CUtlVector<uint8>
-                pub const m_grassFileName: usize = 0x138; // CUtlString
-                pub const m_nodeLightingInfo: usize = 0x140; // BakedLightingInfo_t
-                pub const m_bHasBakedGeometryFlag: usize = 0x188; // bool
+                pub const m_visClusterMembership: usize = 0x18; // CUtlVector<uint16>
+                pub const m_aggregateSceneObjects: usize = 0x30; // CUtlVector<AggregateSceneObject_t>
+                pub const m_clutterSceneObjects: usize = 0x48; // CUtlVector<ClutterSceneObject_t>
+                pub const m_extraVertexStreamOverrides: usize = 0x60; // CUtlVector<ExtraVertexStreamOverride_t>
+                pub const m_materialOverrides: usize = 0x78; // CUtlVector<MaterialOverride_t>
+                pub const m_extraVertexStreams: usize = 0x90; // CUtlVector<WorldNodeOnDiskBufferData_t>
+                pub const m_aggregateInstanceStreams: usize = 0xA8; // CUtlVector<AggregateInstanceStreamOnDiskData_t>
+                pub const m_vertexAlbedoStreams: usize = 0xC0; // CUtlVector<AggregateVertexAlbedoStreamOnDiskData_t>
+                pub const m_layerNames: usize = 0xD8; // CUtlVector<CUtlString>
+                pub const m_sceneObjectLayerIndices: usize = 0xF0; // CUtlVector<uint8>
+                pub const m_grassFileName: usize = 0x108; // CUtlString
+                pub const m_nodeLightingInfo: usize = 0x110; // BakedLightingInfo_t
+                pub const m_bHasBakedGeometryFlag: usize = 0x158; // bool
             }
             // Parent: None
             // Field count: 1
@@ -303,23 +284,6 @@ pub mod cs2_dumper {
                 pub const m_worldNodes: usize = 0x60; // CUtlVector<NodeData_t>
                 pub const m_worldLightingInfo: usize = 0x78; // BakedLightingInfo_t
                 pub const m_entityLumps: usize = 0xC0; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
-            }
-            // Parent: None
-            // Field count: 10
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            pub mod InfoOverlayData_t {
-                pub const m_transform: usize = 0x0; // matrix3x4_t
-                pub const m_flWidth: usize = 0x30; // float32
-                pub const m_flHeight: usize = 0x34; // float32
-                pub const m_flDepth: usize = 0x38; // float32
-                pub const m_vUVStart: usize = 0x3C; // Vector2D
-                pub const m_vUVEnd: usize = 0x44; // Vector2D
-                pub const m_pMaterial: usize = 0x50; // CStrongHandle<InfoForResourceTypeIMaterial2>
-                pub const m_nRenderOrder: usize = 0x58; // int32
-                pub const m_vTintColor: usize = 0x5C; // Vector4D
-                pub const m_sSequenceOverrideName: usize = 0x6C; // CUtlStringToken
             }
             // Parent: None
             // Field count: 3

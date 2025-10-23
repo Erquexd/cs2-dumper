@@ -1,5 +1,5 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-03 23:52:46.504310700 UTC
+// 2025-10-23 22:53:43.326753400 UTC
 
 #pragma once
 
@@ -8,273 +8,9 @@
 namespace cs2_dumper {
     namespace schemas {
         // Module: soundsystem.dll
-        // Class count: 77
-        // Enum count: 19
+        // Class count: 74
+        // Enum count: 0
         namespace soundsystem_dll {
-            // Alignment: 4
-            // Member count: 2
-            enum class EMode_t : uint32_t {
-                Peak = 0x0,
-                RMS = 0x1
-            };
-            // Alignment: 4
-            // Member count: 39
-            enum class VMixGraphCommandID_t : uint32_t {
-                CMD_INVALID = 0xFFFFFFFFFFFFFFFF,
-                CMD_CONTROL_INPUT_STORE = 0x1,
-                CMD_CONTROL_INPUT_STORE_DB = 0x2,
-                CMD_CONTROL_TRANSIENT_INPUT_STORE = 0x3,
-                CMD_CONTROL_TRANSIENT_INPUT_RESET = 0x4,
-                CMD_CONTROL_OUTPUT_STORE = 0x5,
-                CMD_CONTROL_EVALUATE_CURVE = 0x6,
-                CMD_CONTROL_COPY = 0x7,
-                CMD_CONTROL_COND_COPY_IF_NEGATIVE = 0x8,
-                CMD_CONTROL_REMAP_LINEAR = 0x9,
-                CMD_CONTROL_REMAP_SINE = 0xA,
-                CMD_CONTROL_REMAP_LOGLINEAR = 0xB,
-                CMD_CONTROL_MAX = 0xC,
-                CMD_CONTROL_RESET_TIMER = 0xD,
-                CMD_CONTROL_INCREMENT_TIMER = 0xE,
-                CMD_CONTROL_EVAL_ENVELOPE = 0xF,
-                CMD_CONTROL_SINE_BLEND = 0x10,
-                CMD_PROCESSOR_SET_CONTROL_VALUE = 0x11,
-                CMD_PROCESSOR_SET_NAME_INPUT = 0x12,
-                CMD_PROCESSOR_SET_CONTROL_ARRAYVALUE = 0x13,
-                CMD_PROCESSOR_STORE_CONTROL_VALUE = 0x14,
-                CMD_PROCESSOR_SET_VSND_VALUE = 0x15,
-                CMD_SUBMIX_PROCESS = 0x16,
-                CMD_SUBMIX_GENERATE = 0x17,
-                CMD_SUBMIX_GENERATE_SIDECHAIN = 0x18,
-                CMD_SUBMIX_DEBUG = 0x19,
-                CMD_SUBMIX_MIX2x1 = 0x1A,
-                CMD_SUBMIX_OUTPUT = 0x1B,
-                CMD_SUBMIX_OUTPUTx2 = 0x1C,
-                CMD_SUBMIX_COPY = 0x1D,
-                CMD_SUBMIX_ACCUMULATE = 0x1E,
-                CMD_SUBMIX_METER = 0x1F,
-                CMD_SUBMIX_METER_SPECTRUM = 0x20,
-                CMD_IMPULSERESPONSE_INPUT_STORE = 0x21,
-                CMD_PROCESSOR_SET_IMPULSERESPONSE_VALUE = 0x22,
-                CMD_REMAP_VSND_TO_IMPULSERESPONSE = 0x23,
-                CMD_IMPULSERESPONSE_RESET = 0x24,
-                CMD_BLEND_VSNDS_TO_IMPULSERESPONSE = 0x25,
-                CMD_IMPULSERESPONSE_DELAY = 0x26
-            };
-            // Alignment: 1
-            // Member count: 5
-            enum class EWaveform : uint8_t {
-                Sine = 0x0,
-                Square = 0x1,
-                Saw = 0x2,
-                Triangle = 0x3,
-                Noise = 0x4
-            };
-            // Alignment: 4
-            // Member count: 5
-            enum class VMixLFOShape_t : uint32_t {
-                LFO_SHAPE_SINE = 0x0,
-                LFO_SHAPE_SQUARE = 0x1,
-                LFO_SHAPE_TRI = 0x2,
-                LFO_SHAPE_SAW = 0x3,
-                LFO_SHAPE_NOISE = 0x4
-            };
-            // Alignment: 2
-            // Member count: 10
-            enum class VMixFilterType_t : uint16_t {
-                FILTER_UNKNOWN = 0xFFFFFFFFFFFFFFFF,
-                FILTER_LOWPASS = 0x0,
-                FILTER_HIGHPASS = 0x1,
-                FILTER_BANDPASS = 0x2,
-                FILTER_NOTCH = 0x3,
-                FILTER_PEAKING_EQ = 0x4,
-                FILTER_LOW_SHELF = 0x5,
-                FILTER_HIGH_SHELF = 0x6,
-                FILTER_ALLPASS = 0x7,
-                FILTER_PASSTHROUGH = 0x8
-            };
-            // Alignment: 4
-            // Member count: 3
-            enum class SosActionStopType_t : uint32_t {
-                SOS_STOPTYPE_NONE = 0x0,
-                SOS_STOPTYPE_TIME = 0x1,
-                SOS_STOPTYPE_OPVAR = 0x2
-            };
-            // Alignment: 4
-            // Member count: 6
-            enum class SosEditItemType_t : uint32_t {
-                SOS_EDIT_ITEM_TYPE_SOUNDEVENTS = 0x0,
-                SOS_EDIT_ITEM_TYPE_SOUNDEVENT = 0x1,
-                SOS_EDIT_ITEM_TYPE_LIBRARYSTACKS = 0x2,
-                SOS_EDIT_ITEM_TYPE_STACK = 0x3,
-                SOS_EDIT_ITEM_TYPE_OPERATOR = 0x4,
-                SOS_EDIT_ITEM_TYPE_FIELD = 0x5
-            };
-            // Alignment: 4
-            // Member count: 2
-            enum class SosActionSortType_t : uint32_t {
-                SOS_SORTTYPE_HIGHEST = 0x0,
-                SOS_SORTTYPE_LOWEST = 0x1
-            };
-            // Alignment: 4
-            // Member count: 5
-            enum class PlayBackMode_t : uint32_t {
-                Random = 0x0,
-                RandomNoRepeats = 0x1,
-                RandomAvoidLast = 0x2,
-                Sequential = 0x3,
-                RandomWeights = 0x4
-            };
-            // Alignment: 2
-            // Member count: 32
-            enum class VMixProcessorType_t : uint16_t {
-                VPROCESSOR_UNKNOWN = 0x0,
-                VPROCESSOR_RT_PITCH = 0x1,
-                VPROCESSOR_STEAMAUDIO_HRTF = 0x2,
-                VPROCESSOR_DYNAMICS = 0x3,
-                VPROCESSOR_PRESETDSP = 0x4,
-                VPROCESSOR_DELAY = 0x5,
-                VPROCESSOR_MOD_DELAY = 0x6,
-                VPROCESSOR_DIFFUSOR = 0x7,
-                VPROCESSOR_BOXVERB = 0x8,
-                VPROCESSOR_BOXVERB2 = 0x9,
-                VPROCESSOR_FREEVERB = 0xA,
-                VPROCESSOR_PLATEVERB = 0xB,
-                VPROCESSOR_FULLWAVE_INTEGRATOR = 0xC,
-                VPROCESSOR_FILTER = 0xD,
-                VPROCESSOR_STEAMAUDIO_PATHING = 0xE,
-                VPROCESSOR_EQ8 = 0xF,
-                VPROCESSOR_ENVELOPE = 0x10,
-                VPROCESSOR_VOCODER = 0x11,
-                VPROCESSOR_CONVOLUTION = 0x12,
-                VPROCESSOR_DUAL_COMPRESSOR = 0x13,
-                VPROCESSOR_DYNAMICS_3BAND = 0x14,
-                VPROCESSOR_DYNAMICS_COMPRESSOR = 0x15,
-                VPROCESSOR_SHAPER = 0x16,
-                VPROCESSOR_PANNER = 0x17,
-                VPROCESSOR_UTILITY = 0x18,
-                VPROCESSOR_AUTOFILTER = 0x19,
-                VPROCESSOR_OSC = 0x1A,
-                VPROCESSOR_STEREODELAY = 0x1B,
-                VPROCESSOR_EFFECT_CHAIN = 0x1C,
-                VPROCESSOR_SUBGRAPH_SWITCH = 0x1D,
-                VPROCESSOR_STEAMAUDIO_DIRECT = 0x1E,
-                VPROCESSOR_STEAMAUDIO_HYBRIDREVERB = 0x1F
-            };
-            // Alignment: 4
-            // Member count: 30
-            enum class soundlevel_t : uint32_t {
-                SNDLVL_NONE = 0x0,
-                SNDLVL_20dB = 0x14,
-                SNDLVL_25dB = 0x19,
-                SNDLVL_30dB = 0x1E,
-                SNDLVL_35dB = 0x23,
-                SNDLVL_40dB = 0x28,
-                SNDLVL_45dB = 0x2D,
-                SNDLVL_50dB = 0x32,
-                SNDLVL_55dB = 0x37,
-                SNDLVL_IDLE = 0x3C,
-                SNDLVL_60dB = 0x3C,
-                SNDLVL_65dB = 0x41,
-                SNDLVL_STATIC = 0x42,
-                SNDLVL_70dB = 0x46,
-                SNDLVL_NORM = 0x4B,
-                SNDLVL_75dB = 0x4B,
-                SNDLVL_80dB = 0x50,
-                SNDLVL_TALKING = 0x50,
-                SNDLVL_85dB = 0x55,
-                SNDLVL_90dB = 0x5A,
-                SNDLVL_95dB = 0x5F,
-                SNDLVL_100dB = 0x64,
-                SNDLVL_105dB = 0x69,
-                SNDLVL_110dB = 0x6E,
-                SNDLVL_120dB = 0x78,
-                SNDLVL_130dB = 0x82,
-                SNDLVL_GUNFIRE = 0x8C,
-                SNDLVL_140dB = 0x8C,
-                SNDLVL_150dB = 0x96,
-                SNDLVL_180dB = 0xB4
-            };
-            // Alignment: 4
-            // Member count: 2
-            enum class VMixPannerType_t : uint32_t {
-                PANNER_TYPE_LINEAR = 0x0,
-                PANNER_TYPE_EQUAL_POWER = 0x1
-            };
-            // Alignment: 4
-            // Member count: 6
-            enum class VMixChannelOperation_t : uint32_t {
-                VMIX_CHAN_STEREO = 0x0,
-                VMIX_CHAN_LEFT = 0x1,
-                VMIX_CHAN_RIGHT = 0x2,
-                VMIX_CHAN_SWAP = 0x3,
-                VMIX_CHAN_MONO = 0x4,
-                VMIX_CHAN_MID_SIDE = 0x5
-            };
-            // Alignment: 1
-            // Member count: 13
-            enum class EMidiNote : uint8_t {
-                C = 0x0,
-                C_Sharp = 0x1,
-                D = 0x2,
-                D_Sharp = 0x3,
-                E = 0x4,
-                F = 0x5,
-                F_Sharp = 0x6,
-                G = 0x7,
-                G_Sharp = 0x8,
-                A = 0x9,
-                A_Sharp = 0xA,
-                B = 0xB,
-                Count = 0xC
-            };
-            // Alignment: 1
-            // Member count: 4
-            enum class CVSoundFormat_t : uint8_t {
-                PCM16 = 0x0,
-                PCM8 = 0x1,
-                MP3 = 0x2,
-                ADPCM = 0x3
-            };
-            // Alignment: 1
-            // Member count: 9
-            enum class VMixFilterSlope_t : uint8_t {
-                FILTER_SLOPE_1POLE_6dB = 0x0,
-                FILTER_SLOPE_1POLE_12dB = 0x1,
-                FILTER_SLOPE_1POLE_18dB = 0x2,
-                FILTER_SLOPE_1POLE_24dB = 0x3,
-                FILTER_SLOPE_12dB = 0x4,
-                FILTER_SLOPE_24dB = 0x5,
-                FILTER_SLOPE_36dB = 0x6,
-                FILTER_SLOPE_48dB = 0x7,
-                FILTER_SLOPE_MAX = 0x7
-            };
-            // Alignment: 4
-            // Member count: 10
-            enum class ActionType_t : uint32_t {
-                SOS_ACTION_NONE = 0x0,
-                SOS_ACTION_LIMITER = 0x1,
-                SOS_ACTION_TIME_LIMIT = 0x2,
-                SOS_ACTION_TIME_BLOCK_LIMITER = 0x3,
-                SOS_ACTION_SET_SOUNDEVENT_PARAM = 0x4,
-                SOS_ACTION_SOUNDEVENT_CLUSTER = 0x5,
-                SOS_ACTION_SOUNDEVENT_PRIORITY = 0x6,
-                SOS_ACTION_COUNT_ENVELOPE = 0x7,
-                SOS_ACTION_SOUNDEVENT_COUNT = 0x8,
-                SOS_ACTION_SOUNDEVENT_MIN_MAX_VALUES = 0x9
-            };
-            // Alignment: 4
-            // Member count: 3
-            enum class VMixSubgraphSwitchInterpolationType_t : uint32_t {
-                SUBGRAPH_INTERPOLATION_TEMPORAL_CROSSFADE = 0x0,
-                SUBGRAPH_INTERPOLATION_TEMPORAL_FADE_OUT = 0x1,
-                SUBGRAPH_INTERPOLATION_KEEP_LAST_SUBGRAPH_RUNNING = 0x2
-            };
-            // Alignment: 4
-            // Member count: 2
-            enum class SosGroupType_t : uint32_t {
-                SOS_GROUPTYPE_DYNAMIC = 0x0,
-                SOS_GROUPTYPE_STATIC = 0x1
-            };
             // Parent: None
             // Field count: 3
             //
@@ -378,26 +114,28 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionSoundeventClusterSchema {
-                constexpr std::ptrdiff_t m_nMinNearby = 0x18; // int32
-                constexpr std::ptrdiff_t m_flClusterEpsilon = 0x1C; // float32
-                constexpr std::ptrdiff_t m_shouldPlayOpvar = 0x20; // CUtlString
-                constexpr std::ptrdiff_t m_shouldPlayClusterChild = 0x28; // CUtlString
-                constexpr std::ptrdiff_t m_clusterSizeOpvar = 0x30; // CUtlString
-                constexpr std::ptrdiff_t m_groupBoundingBoxMinsOpvar = 0x38; // CUtlString
-                constexpr std::ptrdiff_t m_groupBoundingBoxMaxsOpvar = 0x40; // CUtlString
+                constexpr std::ptrdiff_t m_nMinNearby = 0x8; // int32
+                constexpr std::ptrdiff_t m_flClusterEpsilon = 0xC; // float32
+                constexpr std::ptrdiff_t m_shouldPlayOpvar = 0x10; // CUtlString
+                constexpr std::ptrdiff_t m_shouldPlayClusterChild = 0x18; // CUtlString
+                constexpr std::ptrdiff_t m_clusterSizeOpvar = 0x20; // CUtlString
+                constexpr std::ptrdiff_t m_groupBoundingBoxMinsOpvar = 0x28; // CUtlString
+                constexpr std::ptrdiff_t m_groupBoundingBoxMaxsOpvar = 0x30; // CUtlString
             }
             // Parent: None
             // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionSetSoundeventParameterSchema {
-                constexpr std::ptrdiff_t m_nMaxCount = 0x18; // int32
-                constexpr std::ptrdiff_t m_flMinValue = 0x1C; // float32
-                constexpr std::ptrdiff_t m_flMaxValue = 0x20; // float32
-                constexpr std::ptrdiff_t m_opvarName = 0x28; // CUtlString
-                constexpr std::ptrdiff_t m_nSortType = 0x30; // SosActionSortType_t
+                constexpr std::ptrdiff_t m_nMaxCount = 0x8; // int32
+                constexpr std::ptrdiff_t m_flMinValue = 0xC; // float32
+                constexpr std::ptrdiff_t m_flMaxValue = 0x10; // float32
+                constexpr std::ptrdiff_t m_opvarName = 0x18; // CUtlString
+                constexpr std::ptrdiff_t m_nSortType = 0x20; // SosActionSetParamSortType_t
             }
             // Parent: None
             // Field count: 3
@@ -471,17 +209,18 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionSoundeventMinMaxValuesSchema {
-                constexpr std::ptrdiff_t m_strQueryPublicFieldName = 0x18; // CUtlString
-                constexpr std::ptrdiff_t m_strDelayPublicFieldName = 0x20; // CUtlString
-                constexpr std::ptrdiff_t m_bExcludeStoppedSounds = 0x28; // bool
-                constexpr std::ptrdiff_t m_bExcludeDelayedSounds = 0x29; // bool
-                constexpr std::ptrdiff_t m_bExcludeSoundsBelowThreshold = 0x2A; // bool
-                constexpr std::ptrdiff_t m_flExcludeSoundsMinThresholdValue = 0x2C; // float32
-                constexpr std::ptrdiff_t m_bExcludSoundsAboveThreshold = 0x30; // bool
-                constexpr std::ptrdiff_t m_flExcludeSoundsMaxThresholdValue = 0x34; // float32
-                constexpr std::ptrdiff_t m_strMinValueName = 0x38; // CUtlString
-                constexpr std::ptrdiff_t m_strMaxValueName = 0x40; // CUtlString
+                constexpr std::ptrdiff_t m_strQueryPublicFieldName = 0x8; // CUtlString
+                constexpr std::ptrdiff_t m_strDelayPublicFieldName = 0x10; // CUtlString
+                constexpr std::ptrdiff_t m_bExcludeStoppedSounds = 0x18; // bool
+                constexpr std::ptrdiff_t m_bExcludeDelayedSounds = 0x19; // bool
+                constexpr std::ptrdiff_t m_bExcludeSoundsBelowThreshold = 0x1A; // bool
+                constexpr std::ptrdiff_t m_flExcludeSoundsMinThresholdValue = 0x1C; // float32
+                constexpr std::ptrdiff_t m_bExcludSoundsAboveThreshold = 0x20; // bool
+                constexpr std::ptrdiff_t m_flExcludeSoundsMaxThresholdValue = 0x24; // float32
+                constexpr std::ptrdiff_t m_strMinValueName = 0x28; // CUtlString
+                constexpr std::ptrdiff_t m_strMaxValueName = 0x30; // CUtlString
             }
             // Parent: None
             // Field count: 2
@@ -497,11 +236,12 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionSoundeventPrioritySchema {
-                constexpr std::ptrdiff_t m_priorityValue = 0x18; // CUtlString
-                constexpr std::ptrdiff_t m_priorityVolumeScalar = 0x20; // CUtlString
-                constexpr std::ptrdiff_t m_priorityContributeButDontRead = 0x28; // CUtlString
-                constexpr std::ptrdiff_t m_bPriorityReadButDontContribute = 0x30; // CUtlString
+                constexpr std::ptrdiff_t m_priorityValue = 0x8; // CUtlString
+                constexpr std::ptrdiff_t m_priorityVolumeScalar = 0x10; // CUtlString
+                constexpr std::ptrdiff_t m_priorityContributeButDontRead = 0x18; // CUtlString
+                constexpr std::ptrdiff_t m_bPriorityReadButDontContribute = 0x20; // CUtlString
             }
             // Parent: None
             // Field count: 3
@@ -564,44 +304,34 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_flTaps = 0x4C; // float32
             }
             // Parent: None
-            // Field count: 3
+            // Field count: 0
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPropertyElementNameFn
             namespace CSosGroupActionSchema {
-                constexpr std::ptrdiff_t m_name = 0x8; // CUtlString
-                constexpr std::ptrdiff_t m_actionType = 0x10; // ActionType_t
-                constexpr std::ptrdiff_t m_actionInstanceType = 0x14; // ActionType_t
             }
             // Parent: None
-            // Field count: 9
+            // Field count: 16
             //
             // Metadata:
             // MGetKV3ClassDefaults
-            // MPropertyElementNameFn
             namespace CSosSoundEventGroupSchema {
-                constexpr std::ptrdiff_t m_name = 0x0; // CUtlString
-                constexpr std::ptrdiff_t m_nType = 0x8; // SosGroupType_t
-                constexpr std::ptrdiff_t m_bIsBlocking = 0xC; // bool
+                constexpr std::ptrdiff_t m_nGroupType = 0x8; // SosGroupType_t
+                constexpr std::ptrdiff_t m_bBlocksEvents = 0xC; // bool
                 constexpr std::ptrdiff_t m_nBlockMaxCount = 0x10; // int32
-                constexpr std::ptrdiff_t m_bInvertMatch = 0x14; // bool
-                constexpr std::ptrdiff_t m_matchPattern = 0x18; // CSosGroupMatchPattern
-                constexpr std::ptrdiff_t m_branchPattern = 0x48; // CSosGroupBranchPattern
-                constexpr std::ptrdiff_t m_flLifeSpanTime = 0x58; // float32
-                constexpr std::ptrdiff_t m_vActions = 0xC0; // CSosGroupActionSchema*[4]
-            }
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            namespace CSosGroupBranchPattern {
-                constexpr std::ptrdiff_t m_bMatchEventName = 0x8; // bool
-                constexpr std::ptrdiff_t m_bMatchEventSubString = 0x9; // bool
-                constexpr std::ptrdiff_t m_bMatchEntIndex = 0xA; // bool
-                constexpr std::ptrdiff_t m_bMatchOpvar = 0xB; // bool
-                constexpr std::ptrdiff_t m_bMatchString = 0xC; // bool
+                constexpr std::ptrdiff_t m_flMemberLifespanTime = 0x14; // float32
+                constexpr std::ptrdiff_t m_bInvertMatch = 0x18; // bool
+                constexpr std::ptrdiff_t m_Behavior_EventName = 0x1C; // SosGroupFieldBehavior_t
+                constexpr std::ptrdiff_t m_matchSoundEventName = 0x20; // CUtlString
+                constexpr std::ptrdiff_t m_bMatchEventSubString = 0x28; // bool
+                constexpr std::ptrdiff_t m_matchSoundEventSubString = 0x30; // CUtlString
+                constexpr std::ptrdiff_t m_Behavior_EntIndex = 0x38; // SosGroupFieldBehavior_t
+                constexpr std::ptrdiff_t m_flEntIndex = 0x3C; // float32
+                constexpr std::ptrdiff_t m_Behavior_Opvar = 0x40; // SosGroupFieldBehavior_t
+                constexpr std::ptrdiff_t m_flOpvar = 0x44; // float32
+                constexpr std::ptrdiff_t m_Behavior_String = 0x48; // SosGroupFieldBehavior_t
+                constexpr std::ptrdiff_t m_opvarString = 0x50; // CUtlString
+                constexpr std::ptrdiff_t m_vActions = 0x58; // CUtlVector<CSosGroupActionSchema*>
             }
             // Parent: None
             // Field count: 10
@@ -759,9 +489,10 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionSoundeventCountSchema {
-                constexpr std::ptrdiff_t m_bExcludeStoppedSounds = 0x18; // bool
-                constexpr std::ptrdiff_t m_strCountKeyName = 0x20; // CUtlString
+                constexpr std::ptrdiff_t m_bExcludeStoppedSounds = 0x8; // bool
+                constexpr std::ptrdiff_t m_strCountKeyName = 0x10; // CUtlString
             }
             // Parent: None
             // Field count: 3
@@ -843,26 +574,6 @@ namespace cs2_dumper {
             // Metadata:
             // MGetKV3ClassDefaults
             namespace CSoundInfoHeader {
-            }
-            // Parent: None
-            // Field count: 1
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            namespace CSosSoundEventGroupListSchema {
-                constexpr std::ptrdiff_t m_groupList = 0x0; // CUtlVector<CSosSoundEventGroupSchema>
-            }
-            // Parent: None
-            // Field count: 5
-            //
-            // Metadata:
-            // MGetKV3ClassDefaults
-            namespace CSosGroupMatchPattern {
-                constexpr std::ptrdiff_t m_matchSoundEventName = 0x10; // CUtlString
-                constexpr std::ptrdiff_t m_matchSoundEventSubString = 0x18; // CUtlString
-                constexpr std::ptrdiff_t m_flEntIndex = 0x20; // float32
-                constexpr std::ptrdiff_t m_flOpvar = 0x24; // float32
-                constexpr std::ptrdiff_t m_opvarString = 0x28; // CUtlString
             }
             // Parent: None
             // Field count: 5
@@ -980,14 +691,17 @@ namespace cs2_dumper {
                 constexpr std::ptrdiff_t m_curve4 = 0x1B8; // CPiecewiseCurve
             }
             // Parent: None
-            // Field count: 3
+            // Field count: 5
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionLimitSchema {
-                constexpr std::ptrdiff_t m_nMaxCount = 0x18; // int32
-                constexpr std::ptrdiff_t m_nStopType = 0x1C; // SosActionStopType_t
-                constexpr std::ptrdiff_t m_nSortType = 0x20; // SosActionSortType_t
+                constexpr std::ptrdiff_t m_nMaxCount = 0x8; // int32
+                constexpr std::ptrdiff_t m_nStopType = 0xC; // SosActionStopType_t
+                constexpr std::ptrdiff_t m_nSortType = 0x10; // SosActionLimitSortType_t
+                constexpr std::ptrdiff_t m_bStopImmediate = 0x14; // bool
+                constexpr std::ptrdiff_t m_bCountStopped = 0x15; // bool
             }
             // Parent: None
             // Field count: 1
@@ -1078,9 +792,10 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionTimeBlockLimitSchema {
-                constexpr std::ptrdiff_t m_nMaxCount = 0x18; // int32
-                constexpr std::ptrdiff_t m_flMaxDuration = 0x1C; // float32
+                constexpr std::ptrdiff_t m_nMaxCount = 0x8; // int32
+                constexpr std::ptrdiff_t m_flMaxDuration = 0xC; // float32
             }
             // Parent: None
             // Field count: 2
@@ -1098,15 +813,16 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionMemberCountEnvelopeSchema {
-                constexpr std::ptrdiff_t m_nBaseCount = 0x18; // int32
-                constexpr std::ptrdiff_t m_nTargetCount = 0x1C; // int32
-                constexpr std::ptrdiff_t m_flBaseValue = 0x20; // float32
-                constexpr std::ptrdiff_t m_flTargetValue = 0x24; // float32
-                constexpr std::ptrdiff_t m_flAttack = 0x28; // float32
-                constexpr std::ptrdiff_t m_flDecay = 0x2C; // float32
-                constexpr std::ptrdiff_t m_resultVarName = 0x30; // CUtlString
-                constexpr std::ptrdiff_t m_bSaveToGroup = 0x38; // bool
+                constexpr std::ptrdiff_t m_nBaseCount = 0x8; // int32
+                constexpr std::ptrdiff_t m_nTargetCount = 0xC; // int32
+                constexpr std::ptrdiff_t m_flBaseValue = 0x10; // float32
+                constexpr std::ptrdiff_t m_flTargetValue = 0x14; // float32
+                constexpr std::ptrdiff_t m_flAttack = 0x18; // float32
+                constexpr std::ptrdiff_t m_flDecay = 0x1C; // float32
+                constexpr std::ptrdiff_t m_resultVarName = 0x20; // CUtlString
+                constexpr std::ptrdiff_t m_bSaveToGroup = 0x28; // bool
             }
             // Parent: None
             // Field count: 1
@@ -1123,8 +839,9 @@ namespace cs2_dumper {
             //
             // Metadata:
             // MGetKV3ClassDefaults
+            // MPropertyFriendlyName
             namespace CSosGroupActionTimeLimitSchema {
-                constexpr std::ptrdiff_t m_flMaxDuration = 0x18; // float32
+                constexpr std::ptrdiff_t m_flMaxDuration = 0x8; // float32
             }
             // Parent: None
             // Field count: 10

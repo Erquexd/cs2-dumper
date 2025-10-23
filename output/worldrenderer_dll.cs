@@ -1,37 +1,20 @@
 // Generated using https://github.com/a2x/cs2-dumper
-// 2025-09-03 23:52:46.504310700 UTC
+// 2025-10-23 22:53:43.326753400 UTC
 
 namespace CS2Dumper.Schemas {
     // Module: worldrenderer.dll
-    // Class count: 26
-    // Enum count: 2
+    // Class count: 25
+    // Enum count: 15
     public static class WorldrendererDll {
-        // Alignment: 4
-        // Member count: 15
-        public enum ObjectTypeFlags_t : uint {
-            OBJECT_TYPE_NONE = 0x0,
-            OBJECT_TYPE_MODEL = 0x8,
-            OBJECT_TYPE_BLOCK_LIGHT = 0x10,
-            OBJECT_TYPE_NO_SHADOWS = 0x20,
-            OBJECT_TYPE_WORLDSPACE_TEXURE_BLEND = 0x40,
-            OBJECT_TYPE_DISABLED_IN_LOW_QUALITY = 0x80,
-            OBJECT_TYPE_NO_SUN_SHADOWS = 0x100,
-            OBJECT_TYPE_RENDER_WITH_DYNAMIC = 0x200,
-            OBJECT_TYPE_RENDER_TO_CUBEMAPS = 0x400,
-            OBJECT_TYPE_MODEL_HAS_LODS = 0x800,
-            OBJECT_TYPE_OVERLAY = 0x2000,
-            OBJECT_TYPE_PRECOMPUTED_VISMEMBERS = 0x4000,
-            OBJECT_TYPE_STATIC_CUBE_MAP = 0x8000,
-            OBJECT_TYPE_DISABLE_VIS_CULLING = 0x10000,
-            OBJECT_TYPE_BAKED_GEOMETRY = 0x20000
+        // Alignment: 1
+        // Member count: 0
+        public enum CParticleBindingRealPulse : byte {
+
         }
         // Alignment: 1
-        // Member count: 4
-        public enum AggregateInstanceStream_t : byte {
-            AGGREGATE_INSTANCE_STREAM_NONE = 0x0,
-            AGGREGATE_INSTANCE_STREAM_LIGHTMAPUV_UNORM16 = 0x1,
-            AGGREGATE_INSTANCE_STREAM_VERTEXTINT_UNORM8 = 0x2,
-            AGGREGATE_INSTANCE_STREAM_VERTEXBLEND_UNORM8 = 0x4
+        // Member count: 0
+        public enum CParticleCollectionBindingInstance : byte {
+
         }
         // Parent: None
         // Field count: 1
@@ -179,27 +162,25 @@ namespace CS2Dumper.Schemas {
             public const nint m_entityKeyValues = 0x28; // CUtlLeanVector<EntityKeyValueData_t>
         }
         // Parent: None
-        // Field count: 16
+        // Field count: 14
         //
         // Metadata:
         // MGetKV3ClassDefaults
         public static class WorldNode_t {
             public const nint m_sceneObjects = 0x0; // CUtlVector<SceneObject_t>
-            public const nint m_infoOverlays = 0x18; // CUtlVector<InfoOverlayData_t>
-            public const nint m_visClusterMembership = 0x30; // CUtlVector<uint16>
-            public const nint m_aggregateSceneObjects = 0x48; // CUtlVector<AggregateSceneObject_t>
-            public const nint m_clutterSceneObjects = 0x60; // CUtlVector<ClutterSceneObject_t>
-            public const nint m_extraVertexStreamOverrides = 0x78; // CUtlVector<ExtraVertexStreamOverride_t>
-            public const nint m_materialOverrides = 0x90; // CUtlVector<MaterialOverride_t>
-            public const nint m_extraVertexStreams = 0xA8; // CUtlVector<WorldNodeOnDiskBufferData_t>
-            public const nint m_aggregateInstanceStreams = 0xC0; // CUtlVector<AggregateInstanceStreamOnDiskData_t>
-            public const nint m_vertexAlbedoStreams = 0xD8; // CUtlVector<AggregateVertexAlbedoStreamOnDiskData_t>
-            public const nint m_layerNames = 0xF0; // CUtlVector<CUtlString>
-            public const nint m_sceneObjectLayerIndices = 0x108; // CUtlVector<uint8>
-            public const nint m_overlayLayerIndices = 0x120; // CUtlVector<uint8>
-            public const nint m_grassFileName = 0x138; // CUtlString
-            public const nint m_nodeLightingInfo = 0x140; // BakedLightingInfo_t
-            public const nint m_bHasBakedGeometryFlag = 0x188; // bool
+            public const nint m_visClusterMembership = 0x18; // CUtlVector<uint16>
+            public const nint m_aggregateSceneObjects = 0x30; // CUtlVector<AggregateSceneObject_t>
+            public const nint m_clutterSceneObjects = 0x48; // CUtlVector<ClutterSceneObject_t>
+            public const nint m_extraVertexStreamOverrides = 0x60; // CUtlVector<ExtraVertexStreamOverride_t>
+            public const nint m_materialOverrides = 0x78; // CUtlVector<MaterialOverride_t>
+            public const nint m_extraVertexStreams = 0x90; // CUtlVector<WorldNodeOnDiskBufferData_t>
+            public const nint m_aggregateInstanceStreams = 0xA8; // CUtlVector<AggregateInstanceStreamOnDiskData_t>
+            public const nint m_vertexAlbedoStreams = 0xC0; // CUtlVector<AggregateVertexAlbedoStreamOnDiskData_t>
+            public const nint m_layerNames = 0xD8; // CUtlVector<CUtlString>
+            public const nint m_sceneObjectLayerIndices = 0xF0; // CUtlVector<uint8>
+            public const nint m_grassFileName = 0x108; // CUtlString
+            public const nint m_nodeLightingInfo = 0x110; // BakedLightingInfo_t
+            public const nint m_bHasBakedGeometryFlag = 0x158; // bool
         }
         // Parent: None
         // Field count: 1
@@ -298,23 +279,6 @@ namespace CS2Dumper.Schemas {
             public const nint m_worldNodes = 0x60; // CUtlVector<NodeData_t>
             public const nint m_worldLightingInfo = 0x78; // BakedLightingInfo_t
             public const nint m_entityLumps = 0xC0; // CUtlVector<CStrongHandleCopyable<InfoForResourceTypeCEntityLump>>
-        }
-        // Parent: None
-        // Field count: 10
-        //
-        // Metadata:
-        // MGetKV3ClassDefaults
-        public static class InfoOverlayData_t {
-            public const nint m_transform = 0x0; // matrix3x4_t
-            public const nint m_flWidth = 0x30; // float32
-            public const nint m_flHeight = 0x34; // float32
-            public const nint m_flDepth = 0x38; // float32
-            public const nint m_vUVStart = 0x3C; // Vector2D
-            public const nint m_vUVEnd = 0x44; // Vector2D
-            public const nint m_pMaterial = 0x50; // CStrongHandle<InfoForResourceTypeIMaterial2>
-            public const nint m_nRenderOrder = 0x58; // int32
-            public const nint m_vTintColor = 0x5C; // Vector4D
-            public const nint m_sSequenceOverrideName = 0x6C; // CUtlStringToken
         }
         // Parent: None
         // Field count: 3
